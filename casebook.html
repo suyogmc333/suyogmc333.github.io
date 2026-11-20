@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cost and Management Accounting Casebook</title>
+<meta name="description" content="Suyog MC: condensed cost and management accounting case analyses, MGTP 452, University of California San Diego, Rady School of Management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Suyog MC</a>
+    <nav aria-label="Site"><a href="index.html#work">Back to homepage</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-title">
+    <h1>Cost and management accounting casebook</h1>
+    <p>MGTP 452, Strategic Cost Management, Spring 2026 · University of California San Diego, Rady School of Management. Condensed from my case analyses for the course. Each asks whether the internal accounting system measures what managers actually need to decide. The numbers come from the case exhibits; the analysis and recommendations are mine.</p>
+  </div>
+    <article class="case">
+      <span class="tag">Store24 · Performance measurement</span>
+
+        <h2>Do non-financial measures predict profit?</h2>
+        <p>Store24 tied manager pay to a scorecard built around its "Ban Boredom" in-store strategy. Customer surveys suggested the strategy wasn't working, and the CEO was ready to drop it. I tested the scorecard's assumed causal link directly, using the 30-store sample to relate each store's measures to its next-quarter controllable contribution.</p>
+        <div class="table-scroll">
+          <table class="num">
+            <thead><tr><th>Predictor</th><th>Correlation with next-quarter profit</th><th>p-value</th></tr></thead>
+            <tbody>
+              <tr><td>Crew skills</td><td>+0.77</td><td>&lt; 0.001</td></tr>
+              <tr><td>Ban Boredom score</td><td>+0.16</td><td>0.39</td></tr>
+              <tr><td>Ban Boredom, stores with high crew skill (n = 15)</td><td>+0.81</td><td>&lt; 0.001</td></tr>
+              <tr><td>Ban Boredom, stores with low crew skill (n = 15)</td><td class="neg">−0.78</td><td>0.001</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>On its own the strategy looks irrelevant. Split by crew skill, it is strongly profitable where crews can execute it and value-destroying where they can't. A regression with a Ban Boredom × crew skill interaction confirms this (interaction coefficient +255, p = 0.04, R² = 0.67). The survey averages were blending the two groups.</p>
+        <p class="take">The strategy wasn't the problem; uneven execution was. I recommended keeping it only in stores whose crews could run it, switching to unannounced audits, and re-testing the scorecard's links every two quarters instead of assuming them.</p>
+    </article>
+    <article class="case">
+      <span class="tag">Wilkerson · Seligram · Bridgeton · Costing systems</span>
+
+        <h2>When the allocation base stops matching the cost</h2>
+        <p>Three cases, one failure: overhead spread on direct labor in plants where labor no longer drives overhead. At Wilkerson, $806,000 of monthly overhead was allocated at 300% of direct labor. I rebuilt it with five activity pools (machine hours, setups, receiving, engineering, shipments) that reconcile to the same total.</p>
+        <div class="table-scroll">
+          <table class="num">
+            <thead><tr><th>Gross margin</th><th>Valves</th><th>Pumps</th><th>Flow controllers</th></tr></thead>
+            <tbody>
+              <tr><td>Existing labor-based system</td><td>34.9%</td><td>19.5%</td><td>41.0%</td></tr>
+              <tr><td>Activity-based costing</td><td>46.3%</td><td>33.1%</td><td class="neg">−9.9%</td></tr>
+              <tr><td>Share of production runs</td><td>6%</td><td>31%</td><td>63%</td></tr>
+              <tr><td>Share of shipments</td><td>3%</td><td>23%</td><td>73%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Flow controllers, management's "best" product, lose money on every unit: they use 15% of direct labor but most of the setups and shipments. Pumps were over-costed by about $147,000 a month, enough to explain why management kept cutting a product that was actually fine.</p>
+        <p>Seligram shows the same bias in a testing lab, where a 145% labor burden undercosted automated, machine-intensive work. A two-pool system with a machine-hour rate moved individual lot costs by up to 29%. Bridgeton shows how it compounds: after outsourcing two product lines, direct labor fell 43% but overhead only 27%, so the burden rate jumped from 435% to 577% and the remaining products looked worse every year.</p>
+        <p class="take">Total cost is unchanged under every system; only its distribution moves. But pricing, outsourcing and capital decisions all run on the distribution, so a convenient allocation base can quietly drive a firm out of its best products.</p>
+    </article>
+    <article class="case">
+      <span class="tag">Owens &amp; Minor · Activity-based pricing</span>
+
+        <h2>Pricing a service by what it costs to serve</h2>
+        <p>A medical-supply distributor charged hospitals a markup on product price, but its costs are driven by orders, order lines, deliveries and emergency requests. On a 7% markup, an $800 box of sutures earned a $56 fee and a $30 case of diapers earned $2.10, though the diapers cost more to handle. The pricing hid which customers were unprofitable and gave none of them a reason to order more efficiently.</p>
+        <p>I mapped the activity-based pricing matrix back to the cost-to-serve data. Its rows (purchase orders) recover order-level cost and its columns (order lines) recover line-level handling, together about half of a typical account's cost to serve. Delivery, financing and account costs are deliberately left out of the matrix and recovered separately, so each price signal points at a behavior the customer controls.</p>
+        <p class="take">Once fees follow activity, customers who consolidate orders and adopt EDI see their bill fall. The pricing becomes a tool for reducing cost across the whole supply chain, and it is hard for competitors whose own economics depend on cost-plus to copy.</p>
+    </article>
+    <article class="case">
+      <span class="tag">Birch Paper · Transfer pricing</span>
+
+        <h2>Transfer prices and idle capacity</h2>
+        <p>A division manager chose the cheapest of three bids for a box order: $430 from an outside firm, over $480 from a sister division. That was the right call for his division and the wrong one for the company, because the sister division had idle capacity. Removing internal transfers leaves only the cash each option actually costs Birch.</p>
+        <div class="table-scroll">
+          <table class="num">
+            <thead><tr><th>Cost to Birch, per 1,000 boxes</th><th>Sister division</th><th>West Paper</th><th>Eire</th></tr></thead>
+            <tbody>
+              <tr><td>Variable cost inside Birch</td><td>$288</td><td>—</td><td>$79</td></tr>
+              <tr><td>Paid to outside supplier, net</td><td>—</td><td>$430</td><td>$312</td></tr>
+              <tr class="total"><td>Total cost to Birch</td><td>$288</td><td>$430</td><td>$391</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The highest bid is the cheapest option for the company by $142 per thousand boxes. Market-based transfer pricing only makes sense when the selling division is at capacity, because then an internal sale really does cost an outside one.</p>
+        <p class="take">I argued for fixing the rule rather than overriding the manager: when a division has idle capacity, internal prices are negotiated between its variable cost ($288) and the outside quote ($430). That keeps divisional autonomy and stops the next order from going wrong the same way.</p>
+    </article>
+    <article class="case">
+      <span class="tag">Vyaderm · Incentive design</span>
+
+        <h2>An EVA bonus that pays for luck</h2>
+        <p>I computed the Dermatology division's 2017 Economic Value Added, capitalizing R&amp;D over five years and reversing a goodwill impairment, and then ran the bonus plan through two years.</p>
+        <div class="table-scroll">
+          <table class="num">
+            <thead><tr><th>Manager on a $300,000 salary</th><th>2017</th><th>2018</th></tr></thead>
+            <tbody>
+              <tr><td>EVA ($ thousands)</td><td>31,361</td><td class="neg">≈ −7,959</td></tr>
+              <tr><td>Bonus performance multiple</td><td>3.12×</td><td class="neg">−2.46×</td></tr>
+              <tr><td>Bonus paid</td><td>$370,992</td><td>$0</td></tr>
+              <tr><td>Bonus bank at year end</td><td>$190,992</td><td class="neg">≈ −$251,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The 2017 spike came from a regulator shutting down a competitor, not from anything the team did. The plan pays a windfall on the spike, then sets the next target off that inflated base. When prices normalize, the bank goes deep into deficit and the team faces two or more years of zero bonus for ordinary performance.</p>
+        <p class="take">Pure formula pay is meant to remove discretion, but here it rewards and punishes luck. I recommended a written rule for genuine one-off shocks: normalize EVA for the event, pay on the normalized figure, and set the next target from it.</p>
+    </article>
+    <article class="case">
+      <span class="tag">Compagnie du Froid · Variance analysis</span>
+
+        <h2>Judging managers on what they control</h2>
+        <p>An ice-cream maker paid three country managers 2% of total company profit. I broke Italy's results into volume, mix and price variances on revenue and efficiency and price variances on cost, then compared all three regions against the factors each manager actually controlled.</p>
+        <div class="table-scroll">
+          <table class="num">
+            <thead><tr><th>Italy, € thousands</th><th>Variance</th></tr></thead>
+            <tbody>
+              <tr><td>Revenue: volume</td><td>+150 F</td></tr>
+              <tr><td>Revenue: mix and price</td><td>+10 F</td></tr>
+              <tr><td>Cost: efficiency (older machines)</td><td class="neg">−30 U</td></tr>
+              <tr><td>Cost: input prices (mainly dairy sourcing)</td><td>+46 F</td></tr>
+              <tr><td>Spending, of which −35 is allocated head-office cost</td><td class="neg">−20 U</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Spain posted a loss, but most of it traced to things outside the manager's control: weather 1.7 °C below normal (about 5% of volume by the company's own rule), new machines approved by head office that failed for most of the season, and a transfer charge from France about €510,000 above what in-house production would have cost.</p>
+        <p class="take">I proposed paying about half the bonus on controllable profit against a flexible budget that adjusts for weather, transfer prices and allocations; 30% on a small strategic scorecard; and 20% on company profit, with transfers moved to standard variable cost.</p>
+    </article>
+</main>
+<footer>
+  <div class="wrap"><span>© 2026 Suyog MC</span><a href="index.html">Back to homepage</a></div>
+</footer>
+</body>
+</html>

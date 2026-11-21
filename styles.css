@@ -130,3 +130,55 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .contact-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
 .location { color: var(--muted); margin-top: 12px; font-size: 0.95rem; }
 .cv-row .org a i, .cv-row .desc a i { margin-right: 4px; font-size: 0.85em; }
+
+/* ---- Visitor experience: motion, theme toggle, progress ---- */
+.nav { transition: box-shadow .25s ease, background-color .25s ease; }
+.nav.scrolled { box-shadow: 0 4px 18px rgba(20,40,60,0.07); }
+.nav nav { align-items: center; }
+.nav nav a { position: relative; transition: color .2s ease; }
+.nav nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.nav nav a:hover::after, .nav nav a.active::after { transform: scaleX(1); }
+.nav nav a.active { color: var(--ink); }
+.progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; }
+.theme-toggle { background: none; border: 1px solid var(--rule); color: var(--muted); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: inline-grid; place-items: center; font-size: 0.85rem; transition: color .2s, border-color .2s, transform .3s; }
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); transform: rotate(-20deg); }
+.theme-toggle:focus-visible, .to-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Intro entrance */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.intro img { animation: rise .7s ease both; transition: transform .35s ease, box-shadow .35s ease; }
+.intro img:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(0,0,0,0.08), 0 14px 30px rgba(20,40,60,0.16); }
+.intro > div > * { animation: rise .7s ease both; }
+.intro h1 { animation-delay: .08s; }
+.intro .role { animation-delay: .16s; }
+.intro .links { animation-delay: .24s; }
+
+/* Hover details */
+.pill { transition: border-color .2s, color .2s, transform .2s, box-shadow .2s, filter .2s; }
+.pill:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(20,40,60,0.10); }
+.interests li { transition: transform .25s ease, box-shadow .25s ease; }
+.interests li:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(20,40,60,0.10); }
+.entry { position: relative; transition: background-color .25s ease; }
+.entry::before { content: ""; position: absolute; left: -16px; top: 18px; bottom: 20px; width: 3px; border-radius: 2px; background: var(--accent); transform: scaleY(0); transition: transform .25s ease; }
+.entry:hover::before { transform: scaleY(1); }
+.files a { transition: border-color .2s, transform .2s, box-shadow .2s; }
+.files a:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(20,40,60,0.08); }
+.skills span { transition: background-color .2s, color .2s; }
+.skills span:hover { background: var(--accent); color: #fff; }
+section > h2::after { transition: width .6s ease .1s; }
+
+/* Back to top */
+.to-top { position: fixed; right: 22px; bottom: 22px; width: 42px; height: 42px; border-radius: 50%; border: none; background: var(--accent); color: #fff; cursor: pointer; box-shadow: 0 6px 18px rgba(20,40,60,0.2); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s, transform .25s; z-index: 6; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { filter: brightness(1.1); }
+
+/* Scroll reveal (only when JS is running and motion is allowed) */
+.reveal-ready .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal-ready .reveal.in { opacity: 1; transform: none; }
+.reveal-ready section > h2.reveal::after { width: 0; }
+.reveal-ready section > h2.reveal.in::after { width: 48px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media (max-width: 640px) { .entry::before { display: none; } .nav nav { gap: 16px; } }

@@ -74,7 +74,7 @@ section > h2::after { content: ""; position: absolute; left: 0; bottom: -1px; wi
 .files { gap: 8px; }
 .files a { font-size: 0.85rem; padding: 3px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--bg); }
 .files a:hover { border-color: var(--accent); text-decoration: none; }
-.files a::after { content: " \2197"; color: var(--muted); font-weight: 400; }
+.files a i { color: var(--accent); }
 
 /* Background */
 .cv-row { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 10px 0; }
@@ -122,3 +122,11 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 @media (max-width: 640px) { .beyond { grid-template-columns: 1fr; } }
 .beyond h3 { font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
 .lang-level { color: var(--muted); font-size: 0.85rem; }
+
+.pill i, .files a i, .location i { margin-right: 7px; }
+.pill.primary i { color: #fff; }
+.pill .fa-linkedin { color: #0A66C2; }
+.pill:hover .fa-linkedin { color: inherit; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.location { color: var(--muted); margin-top: 12px; font-size: 0.95rem; }
+.cv-row .org a i { margin-right: 4px; font-size: 0.85em; }

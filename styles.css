@@ -262,3 +262,4 @@ body { overflow-x: clip; }
 .abstract.collapsible > div { border-left: 2px solid var(--rule); padding-left: 14px; }
 .keywords { color: var(--muted); font-size: 0.85rem; margin-top: 10px; letter-spacing: 0.01em; }
 .keywords::before { content: "Keywords: "; font-weight: 600; }
+#research h3.sub { margin-top: 30px; }

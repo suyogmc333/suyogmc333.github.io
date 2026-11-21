@@ -43,6 +43,19 @@
   });
 
 
+  // Expandable abstracts (shown by default without JS)
+  document.querySelectorAll('.abs-toggle').forEach(function (btn) {
+    var box = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!box) return;
+    box.classList.add('collapsible');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      box.classList.toggle('open', !open);
+    });
+  });
+
   // Project filters
   var filterBtns = document.querySelectorAll('.filters button');
   var projects = document.querySelectorAll('#work .entry');

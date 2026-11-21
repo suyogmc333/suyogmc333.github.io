@@ -243,3 +243,22 @@ body { overflow-x: clip; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .pill.primary, :root:not([data-theme="light"]) .pill.primary i, :root:not([data-theme="light"]) .filters button.active, :root:not([data-theme="light"]) .to-top { color: #12161b; }
 }
+
+/* ---- Research: agenda, abstracts, keywords ---- */
+.agenda { font-size: 1.02rem; color: var(--ink); border-left: 3px solid var(--accent); background: var(--soft); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-bottom: 6px; }
+.paper .files { margin-top: 10px; }
+.abs-toggle { font: inherit; font-size: 0.85rem; font-weight: 600; color: var(--accent); background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; padding: 3px 12px; cursor: pointer; display: inline-flex; align-items: center; transition: border-color .2s, transform .2s, box-shadow .2s, background-color .2s, color .2s; }
+.abs-toggle i { margin-right: 7px; }
+.abs-toggle:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(20,40,60,0.08); }
+.abs-toggle[aria-expanded="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.abs-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+:root[data-theme="dark"] .abs-toggle[aria-expanded="true"] { color: #12161b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .abs-toggle[aria-expanded="true"] { color: #12161b; } }
+.abstract > div > p + p { margin-top: 6px; }
+.abstract { margin-top: 10px; }
+.abstract.collapsible { display: grid; grid-template-rows: 0fr; margin-top: 0; transition: grid-template-rows .35s ease, margin-top .35s ease; }
+.abstract.collapsible > div { overflow: hidden; }
+.abstract.collapsible.open { grid-template-rows: 1fr; margin-top: 12px; }
+.abstract.collapsible > div { border-left: 2px solid var(--rule); padding-left: 14px; }
+.keywords { color: var(--muted); font-size: 0.85rem; margin-top: 10px; letter-spacing: 0.01em; }
+.keywords::before { content: "Keywords: "; font-weight: 600; }

@@ -129,4 +129,4 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .pill:hover .fa-linkedin { color: inherit; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
 .location { color: var(--muted); margin-top: 12px; font-size: 0.95rem; }
-.cv-row .org a i { margin-right: 4px; font-size: 0.85em; }
+.cv-row .org a i, .cv-row .desc a i { margin-right: 4px; font-size: 0.85em; }
